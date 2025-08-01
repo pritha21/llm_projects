@@ -1,1 +1,5 @@
+streamlit
+requests
+beautifulsoup4
+langchain-groq
 
