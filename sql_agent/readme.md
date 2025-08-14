@@ -34,21 +34,23 @@ Follow these instructions to set up and run the project locally.
 Prerequisites
 Python 3.8+
 A Groq API Key
+
 **1. Clone the Repository**
 
 bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
+
 **2. Set Up a Virtual Environment**
 
 It's recommended to use a virtual environment to manage dependencies.
 
 bash
-# For macOS / Linux
+For macOS / Linux-
 python3 -m venv venv
 source venv/bin/activate
 
-# For Windows
+For Windows-
 python -m venv venv
 .\venv\Scripts\activate
 
