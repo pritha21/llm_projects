@@ -1,0 +1,7 @@
+# requirements.txt
+langchain
+langchain-groq
+langchain-community
+kagglehub
+python-dotenv
+python -3.11
