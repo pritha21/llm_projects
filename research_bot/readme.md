@@ -39,6 +39,6 @@ streamlit run streamlit_app.py
 - Non-AI queries are politely refused.
 
 ## Notes
-- Model: By default, the bot uses `llama-3.1-70b-versatile`. You can override via `GROQ_MODEL` in `.env`.
+- Model: By default, the bot uses `moonshotai/kimi-k2-instruct-0905`. 
 - The agent uses a combined tool to fetch both arXiv and web results before answering.
 - Keep your API keys secret and do not commit `.env`.
