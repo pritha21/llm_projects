@@ -1,0 +1,10 @@
+langchain>=0.2.16
+langchain-community>=0.2.16
+langchain-core>=0.2.38
+langgraph>=0.2.19
+langchain-groq>=0.1.4
+python-dotenv>=1.0.1
+arxiv>=2.1.0
+requests>=2.31.0
+groq>=0.11.0
+streamlit>=1.37.0
