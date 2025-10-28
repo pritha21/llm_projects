@@ -1,0 +1,8 @@
+# requirements.txt
+streamlit
+langchain
+langchain-groq
+python-dotenv
+pydantic
+pyyaml
+sentence-transformers
