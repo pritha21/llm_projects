@@ -1,1 +1,141 @@
+# Routing Examples for Wellness Orchestrator
+# These examples teach the LLM how to route user requests to the correct agent
 
+# Agent categories:
+# - EXERCISE: Physical fitness, workouts, training
+# - MINDFULNESS: Mental wellness, meditation, breathing, crisis support
+# - NUTRITION: Diet, meals, calories, recipes
+# - Combinations: EXERCISE+NUTRITION, etc.
+
+routing_rules:
+  - priority: 1
+    name: "Crisis Detection"
+    description: "Highest priority - route to mindfulness for crisis support"
+    route: "MINDFULNESS"
+    
+  - priority: 2
+    name: "Physical Exercise"
+    description: "Physical movement and strength training"
+    route: "EXERCISE"
+    
+  - priority: 3
+    name: "Food and Nutrition"
+    description: "Diet, meals, and eating"
+    route: "NUTRITION"
+    
+  - priority: 4
+    name: "Mental Wellness"
+    description: "Meditation, stress relief, mental health"
+    route: "MINDFULNESS"
+    
+  - priority: 5
+    name: "Combined Requests"
+    description: "Requests spanning multiple domains"
+    route: "MULTIPLE"
+
+examples:
+  # Exercise Examples
+  - input: "I want to strengthen my core"
+    route: "EXERCISE"
+    reasoning: "Physical strength training request"
+    
+  - input: "give me core exercises"
+    route: "EXERCISE"
+    reasoning: "Workout request for specific body part"
+    
+  - input: "I have back pain, need exercises"
+    route: "EXERCISE"
+    reasoning: "Physical therapy exercises"
+    
+  - input: "what's a good workout plan"
+    route: "EXERCISE"
+    reasoning: "General fitness plan request"
+    
+  - input: "how do I build muscle"
+    route: "EXERCISE"
+    reasoning: "Muscle building - physical training"
+    
+  - input: "I want to run a 5k"
+    route: "EXERCISE"
+    reasoning: "Cardio training goal"
+  
+  # Mindfulness Examples
+  - input: "I'm stressed and can't focus"
+    route: "MINDFULNESS"
+    reasoning: "Mental wellness - stress and focus issues"
+    
+  - input: "help me sleep better"
+    route: "MINDFULNESS"
+    reasoning: "Sleep is a mental wellness concern"
+    
+  - input: "I feel anxious"
+    route: "MINDFULNESS"
+    reasoning: "Mental health concern"
+    
+  - input: "breathing exercises for anxiety"
+    route: "MINDFULNESS"
+    reasoning: "Anxiety context - mental wellness"
+    
+  - input: "I need to relax"
+    route: "MINDFULNESS"
+    reasoning: "Relaxation and stress relief"
+    
+  - input: "teach me meditation"
+    route: "MINDFULNESS"
+    reasoning: "Meditation practice"
+  
+  # Crisis Examples (highest priority)
+  - input: "I want to die"
+    route: "MINDFULNESS"
+    reasoning: "CRISIS - suicidal ideation requires immediate mindfulness support"
+    
+  - input: "I want to hurt myself"
+    route: "MINDFULNESS"
+    reasoning: "CRISIS - self-harm indication"
+  
+  # Nutrition Examples
+  - input: "I need a meal plan for weight loss"
+    route: "NUTRITION"
+    reasoning: "Diet and meal planning"
+    
+  - input: "how many calories should I eat"
+    route: "NUTRITION"
+    reasoning: "Calorie and nutrition guidance"
+    
+  - input: "what should I eat after workout"
+    route: "NUTRITION"
+    reasoning: "Food and eating question"
+    
+  - input: "give me healthy recipes"
+    route: "NUTRITION"
+    reasoning: "Recipe request"
+    
+  - input: "I'm vegetarian, what can I eat"
+    route: "NUTRITION"
+    reasoning: "Dietary preference guidance"
+    
+  - input: "help me with my diet"
+    route: "NUTRITION"
+    reasoning: "General nutrition assistance"
+  
+  # Combined Examples
+  - input: "give me a workout and diet plan"
+    route: "EXERCISE+NUTRITION"
+    reasoning: "Both physical training and meal planning requested"
+    
+  - input: "I want to build muscle, what should I eat"
+    route: "EXERCISE+NUTRITION"
+    reasoning: "Muscle building (exercise) and nutrition combined"
+    
+  - input: "help me lose weight with exercise and food"
+    route: "EXERCISE+NUTRITION"
+    reasoning: "Weight loss through both exercise and diet"
+  
+  # Context-Dependent Examples
+  - input: "breathing exercises for running"
+    route: "EXERCISE"
+    reasoning: "Running context - physical performance breathing"
+    
+  - input: "stretches before workout"
+    route: "EXERCISE"
+    reasoning: "Physical stretching for exercise"
