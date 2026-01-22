@@ -1,0 +1,8 @@
+langchain
+langchain-groq
+langchain-community
+python-dotenv
+requests
+pydantic
+youtube-search-python
+pyyaml
