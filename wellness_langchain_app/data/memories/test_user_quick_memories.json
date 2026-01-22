@@ -1,0 +1,40 @@
+{
+  "user_id": "test_user_quick",
+  "short_term": [
+    {
+      "type": "interaction",
+      "content": "User asked: I want a strength training plan. 30 minutes, 3 days a week.... | Response provided via Exercise Agent",
+      "timestamp": "2026-01-21T23:20:08.992051",
+      "metadata": {
+        "route": "exercise"
+      }
+    },
+    {
+      "type": "interaction",
+      "content": "User asked: I'm feeling anxious and need a breathing exercise.... | Response provided via Mindfulness Agent",
+      "timestamp": "2026-01-21T23:20:10.152275",
+      "metadata": {
+        "route": "mindfulness"
+      }
+    },
+    {
+      "type": "action",
+      "content": "Completed 30-minute strength workout",
+      "timestamp": "2026-01-21T23:20:10.168314",
+      "metadata": {
+        "type": "workout"
+      }
+    },
+    {
+      "type": "preference",
+      "content": "Prefers morning workouts",
+      "timestamp": "2026-01-21T23:20:10.183355",
+      "metadata": {
+        "category": "scheduling"
+      }
+    }
+  ],
+  "long_term": [],
+  "compaction_count": 0,
+  "created_at": "2026-01-21T23:20:08.992051"
+}
