@@ -34,40 +34,9 @@ A comprehensive AI-powered wellness system that orchestrates specialized agents 
 
 The system uses a **Hub-and-Spoke** architecture where the Orchestrator manages specialized sub-agents.
 
-```mermaid
-graph TD
-    User[User Input] --> Orchestrator
-    
-    subgraph Core "The Brain"
-        Orchestrator --> Router[YAML Router]
-        Orchestrator --> Memory[Memory Manager]
-        Orchestrator --> Profile[Profile Manager]
-    end
-    
-    subgraph Agents "The Experts"
-        Orchestrator --> Exercise[🏋️ Exercise Agent]
-        Orchestrator --> Mindfulness[🧘 Mindfulness Agent]
-        Orchestrator --> Nutrition[🥗 Nutrition Agent]
-    end
-    
-    subgraph Tools "Capabilities"
-        Exercise --> YT1[YouTube Search]
-        Exercise --> GenPlan[Workout Planner]
-        
-        Mindfulness --> YT2[YouTube Search]
-        Mindfulness --> Crisis[Crisis Resources]
-        
-        Nutrition --> YT3[YouTube Search]
-        Nutrition --> Calc[Calorie Calc]
-        Nutrition --> Plans[Meal Planner]
-    end
-```
-
----
-
 ## Project Structure
 
-```text
+
 wellness_langchain_app/
 ├── app_langchain.py          # Main CLI entry point
 ├── orchestrator.py           # Central logic & agent coordination
@@ -150,3 +119,4 @@ This allows agents to remember context ("You mentioned back pain last week") wit
 
 ## License
 MIT License
+
