@@ -37,6 +37,7 @@ The system uses a **Hub-and-Spoke** architecture where the Orchestrator manages 
 ## Project Structure
 
 
+```text
 wellness_langchain_app/
 ├── app_langchain.py          # Main CLI entry point
 ├── orchestrator.py           # Central logic & agent coordination
@@ -65,6 +66,7 @@ wellness_langchain_app/
     ├── profiles/             # User profiles (json)
     └── memories/             # User interaction history (json)
 ```
+
 
 ---
 
@@ -119,4 +121,5 @@ This allows agents to remember context ("You mentioned back pain last week") wit
 
 ## License
 MIT License
+
 
